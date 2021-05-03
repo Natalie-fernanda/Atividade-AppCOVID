@@ -3,7 +3,6 @@ package com.mycompany.CoronaApp.classes;
 import java.util.Date;
 
 /**
- *
  */
 public class Visita {
     
@@ -19,66 +18,42 @@ public class Visita {
     
     private String diagnostico;
     
-    private boolean foiConcluida = false;
+    private StatusVisita status = StatusVisita.AGENDADA;
 
     public Visita() {
         
     }
 
-    public Visita(int codigo, Paciente paciente, String profissional, Date data, boolean pacienteInfectado, String diagnostico) {
-        this.codigo = codigo;
-        this.paciente = paciente;
-        this.profissional = profissional;
-        this.data = data;
-        this.pacienteInfectado = pacienteInfectado;
-        this.diagnostico = diagnostico;
-    }
-
     public Visita(int codigo, Paciente paciente, String profissional, 
-            Date data, boolean pacienteInfectado, String diagnostico, boolean foiConcluida) {
+            Date data, boolean pacienteInfectado, String diagnostico) {
         this.codigo = codigo;
         this.paciente = paciente;
         this.profissional = profissional;
         this.data = data;
         this.pacienteInfectado = pacienteInfectado;
         this.diagnostico = diagnostico;
-        this.foiConcluida = foiConcluida;
     }
     
     public int agendarVisita() {
         return 0;
     }
+
+    public StatusVisita getStatus() {
+        return status;
+    }
+
+    public void setStatus(StatusVisita status) {
+        this.status = status;
+    }
     
-    public int atualizarVisita(boolean foiConcluida, boolean pacienteInfectado) {
+    public  void atualizarVisita(boolean pacienteInfectado) {
         this.pacienteInfectado = pacienteInfectado;
-        this.foiConcluida = foiConcluida;
-        return 0;
+        setStatus(StatusVisita.FINALIZADA);
     }
     
     public Visita consultarVisita() {
         return new Visita();
     }
-    
-    
-
-    /**
-     * Get the value of foiConcluida
-     *
-     * @return the value of foiConcluida
-     */
-    public boolean isFoiConcluida() {
-        return foiConcluida;
-    }
-
-    /**
-     * Set the value of foiConcluida
-     *
-     * @param foiConcluida new value of foiConcluida
-     */
-    public void setFoiConcluida(boolean foiConcluida) {
-        this.foiConcluida = foiConcluida;
-    }
-
 
     /**
      * Get the value of diagnostico

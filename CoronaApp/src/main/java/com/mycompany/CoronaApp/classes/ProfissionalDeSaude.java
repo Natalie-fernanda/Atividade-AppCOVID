@@ -1,5 +1,5 @@
 package com.mycompany.CoronaApp.classes;
-import com.mycompany.mavenproject1.classes.Usuario;
+import com.mycompany.CoronaApp.classes.Usuario;
 
 /**
  *
