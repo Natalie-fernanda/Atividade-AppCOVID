@@ -10,7 +10,7 @@ public class Visita {
 
     private Paciente paciente;
     
-    private String profissional;
+    private ProfissionalDeSaude profissional;
     
     private Date data;
     
@@ -24,7 +24,7 @@ public class Visita {
         
     }
 
-    public Visita(int codigo, Paciente paciente, String profissional, 
+    public Visita(int codigo, Paciente paciente, ProfissionalDeSaude profissional, 
             Date data, boolean pacienteInfectado, String diagnostico) {
         this.codigo = codigo;
         this.paciente = paciente;
@@ -46,7 +46,7 @@ public class Visita {
         this.status = status;
     }
     
-    public  void atualizarVisita(boolean pacienteInfectado) {
+    public void atualizarVisita(boolean pacienteInfectado) {
         this.pacienteInfectado = pacienteInfectado;
         setStatus(StatusVisita.FINALIZADA);
     }
@@ -116,7 +116,7 @@ public class Visita {
      *
      * @return the value of profissional
      */
-    public String getProfissional() {
+    public ProfissionalDeSaude getProfissional() {
         return profissional;
     }
 
@@ -125,7 +125,7 @@ public class Visita {
      *
      * @param profissional new value of profissional
      */
-    public void setProfissional(String profissional) {
+    public void setProfissional(ProfissionalDeSaude profissional) {
         this.profissional = profissional;
     }
 

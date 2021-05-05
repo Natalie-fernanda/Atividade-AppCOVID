@@ -5,28 +5,28 @@ import com.mycompany.CoronaApp.classes.Usuario;
  *
  */
 public class ProfissionalDeSaude extends Usuario{
-    private int CRM;
+    private String CRM;
     
     public ProfissionalDeSaude() {
         super();
     }
     
-    public ProfissionalDeSaude(String nome, Integer telefone, int CPF,
-            String senha, int CRM) {
+    public ProfissionalDeSaude(String nome, Long telefone, Long CPF,
+            String senha, String CRM) {
         super( nome, telefone, CPF, senha);
         this.CRM = CRM;
     }
     
 
-    public ProfissionalDeSaude(String nome, Integer telefone, int CPF, String cidade, 
-            String estado, String senha, int CRM) {
+    public ProfissionalDeSaude(String nome, Long telefone, Long CPF, String cidade, 
+            String estado, String senha, String CRM) {
         super(nome,  telefone, CPF, cidade, estado, senha);
         this.CRM = CRM;
     }
     
     
-    public int cadastrarProfissionalDeSauda(String nome, Integer telefone, int CPF, String cidade, 
-            String estado, String senha, int CRM) {
+    public int cadastrarProfissionalDeSauda(String nome, Long telefone, Long CPF, String cidade, 
+            String estado, String senha, String CRM) {
         return 0;
     }
     /**
@@ -34,7 +34,7 @@ public class ProfissionalDeSaude extends Usuario{
      *
      * @return the value of CRM
      */
-    public int getCRM() {
+    public String getCRM() {
         return CRM;
     }
 
@@ -43,7 +43,7 @@ public class ProfissionalDeSaude extends Usuario{
      *
      * @param CRM new value of CRM
      */
-    public void setCRM(int CRM) {
+    public void setCRM(String CRM) {
         this.CRM = CRM;
     }
 

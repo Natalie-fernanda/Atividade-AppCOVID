@@ -13,14 +13,13 @@ public class Paciente extends Usuario{
        super();
     }
     
-    public Paciente(String nome, Integer telefone, int CPF, String senha, 
+    public Paciente(String nome, Long telefone, Long CPF, String senha, 
             List<String> sintomas) {
         super( nome, telefone, CPF, senha);
         this.sintomas = sintomas;
     }
-    
 
-    public Paciente(String nome, Integer telefone, int CPF, String cidade, 
+    public Paciente(String nome, Long telefone, Long CPF, String cidade, 
             String estado, String senha, List<String> sintomas) {
         super(nome,  telefone, CPF, cidade, estado, senha);
             this.sintomas = sintomas;
@@ -34,7 +33,7 @@ public class Paciente extends Usuario{
         this.sintomas = sintomas;
     }
     
-    public int cadastrarPaciente(String nome, Integer telefone, int CPF,
+    public int cadastrarPaciente(String nome, Integer telefone, Long CPF,
             String senha, List<String> sintomas) {
         return 0;
     }

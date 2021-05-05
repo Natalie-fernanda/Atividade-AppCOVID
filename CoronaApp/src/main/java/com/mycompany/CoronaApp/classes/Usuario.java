@@ -12,7 +12,7 @@ public class Usuario {
         
     }
     
-    public Usuario(String nome, Integer telefone, int CPF, String senha) {
+    public Usuario(String nome, Long telefone, Long CPF, String senha) {
         this.nome = nome;
         this.telefone = telefone;
         this.CPF = CPF;
@@ -20,7 +20,7 @@ public class Usuario {
     }
     
 
-    public Usuario(String nome, Integer telefone, int CPF, String cidade, 
+    public Usuario(String nome, Long telefone, Long CPF, String cidade, 
             String estado, String senha) {
         this.nome = nome;
         this.telefone = telefone;
@@ -33,9 +33,9 @@ public class Usuario {
     
     private String nome;
     
-    private Integer telefone;
+    private Long telefone;
     
-    private int CPF;
+    private Long CPF;
     
     private String cidade;
         
@@ -43,8 +43,8 @@ public class Usuario {
     
     private String senha;
     
-    public int fazerLogin(int CPF, String senha) {
-        return this.CPF == CPF
+    public int fazerLogin(Long CPF, String senha) {
+        return this.CPF.equals(CPF)
                 && Objects.equals(this.senha, senha) ? 1 : 0;
     }
 
@@ -110,7 +110,7 @@ public class Usuario {
      *
      * @return the value of CPF
      */
-    public int getCPF() {
+    public Long getCPF() {
         return CPF;
     }
 
@@ -119,7 +119,7 @@ public class Usuario {
      *
      * @param CPF new value of CPF
      */
-    public void setCPF(int CPF) {
+    public void setCPF(Long CPF) {
         this.CPF = CPF;
     }
 
@@ -129,7 +129,7 @@ public class Usuario {
      *
      * @return the value of telefone
      */
-    public Integer getTelefone() {
+    public Long getTelefone() {
         return telefone;
     }
 
@@ -138,7 +138,7 @@ public class Usuario {
      *
      * @param telefone new value of telefone
      */
-    public void setTelefone(Integer telefone) {
+    public void setTelefone(Long telefone) {
         this.telefone = telefone;
     }
 
